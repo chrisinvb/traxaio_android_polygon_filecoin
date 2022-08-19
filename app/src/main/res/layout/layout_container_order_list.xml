@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txt_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:text="Order by"
+        android:padding="16dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#CDCDCD"/>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/lyt_selection_group"
+        android:layout_width="match_parent"
+        android:layout_marginTop="8dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="12dp"
+            android:drawablePadding="16dp"
+            android:gravity="center_vertical"
+            android:textSize="15sp"
+            android:foreground="?android:selectableItemBackground"
+            android:clickable="true"
+            android:textColor="@color/black"
+            android:focusable="true"
+            android:drawableStart="@drawable/ic_baseline_done_24"
+            android:text="Time"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="12dp"
+            android:gravity="center_vertical"
+            android:textSize="15sp"
+            android:drawablePadding="16dp"
+            android:textColor="@color/black"
+            android:drawableStart="@drawable/ic_empty"
+            android:foreground="?android:selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="Container ID"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

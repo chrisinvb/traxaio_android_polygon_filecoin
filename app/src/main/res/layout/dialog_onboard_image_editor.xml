@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:paddingHorizontal="16dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Make It Yours"
+        android:textSize="25sp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:textStyle="" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:drawablePadding="18dp"
+        android:paddingHorizontal="32dp"
+        android:gravity="center"
+        android:text="While your container is being processed, customize it with cool stickers and emojis. It belongs to you!" />
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/container"
+            app:srcCompat="@drawable/container"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/sticker"
+            android:layout_width="wrap_content"
+            android:layout_height="180dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="64dp"
+            android:scaleY="1.1"
+            android:scaleX="1.1"
+            android:alpha="0"
+            android:layout_marginRight="38dp"
+            android:rotation="-20"
+            android:src="@drawable/stickertraxa_1"
+            app:srcCompat="@drawable/stickertraxa_1"/>
+
+    </FrameLayout>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:gravity="end">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnPositive"
+            android:text="LET'S DO IT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

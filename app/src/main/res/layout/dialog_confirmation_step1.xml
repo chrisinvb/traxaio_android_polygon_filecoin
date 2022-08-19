@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="@string/question_capture_confirmation_dialog"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgRecording"
+        android:layout_width="match_parent"
+        android:scaleType="fitCenter"
+        android:background="@color/black"
+        android:layout_height="400dp"/>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+
+        <variable
+            name="title"
+            type="String" />
+
+        <variable
+            name="message"
+            type="String" />
+
+        <variable
+            name="progress"
+            type="Integer" />
+
+        <variable
+            name="max"
+            type="Integer" />
+
+        <variable
+            name="titleColor"
+            type="Integer" />
+
+        <variable
+            name="messageColor"
+            type="Integer" />
+
+        <variable
+            name="cardColor"
+            type="Integer" />
+
+        <variable
+            name="progressColor"
+            type="Integer" />
+
+        <variable
+            name="progressBackgroundColor"
+            type="Integer" />
+
+        <variable
+            name="cardClicked"
+            type="android.view.View.OnClickListener" />
+
+    </data>
+
+
+    <androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:cardCornerRadius="14dp"
+        android:layout_marginHorizontal="16dp"
+        app:cardElevation="4dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="@{cardClicked}"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:orientation="vertical">
+
+            <com.google.android.material.progressindicator.LinearProgressIndicator
+                android:layout_width="match_parent"
+                android:progress="@{progress}"
+                android:indeterminate="false"
+                android:max="@{max}"
+                app:trackCornerRadius="8dp"
+                android:layout_height="8dp"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:text="@{title}"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                android:text="@{message}"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

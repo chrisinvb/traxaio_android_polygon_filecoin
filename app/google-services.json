@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "186133769968",
+    "project_id": "traxaio",
+    "storage_bucket": "traxaio.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:186133769968:android:f27ae1ed6ca30940901c35",
+        "android_client_info": {
+          "package_name": "io.traxa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "186133769968-n99sj7c019denjodgl0cdhrnlic93g89.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "io.traxa",
+            "certificate_hash": "5fdeb2ce3a544c6abc0ae33fde8b7b636bdf2018"
+          }
+        },
+        {
+          "client_id": "186133769968-kp7kjth3c7ohc3np9n4qke6btcsem8ee.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCbrfK7W90AOmg72ZcBQZpp0FRqhSW5umA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "186133769968-kp7kjth3c7ohc3np9n4qke6btcsem8ee.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

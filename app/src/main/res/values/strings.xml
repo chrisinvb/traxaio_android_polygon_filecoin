@@ -1,0 +1,101 @@
+<resources>
+    <string name="app_name">Traxa.io</string>
+    <string name="about">About</string>
+    <string name="ok">OK</string>
+    <string name="app_source">App</string>
+    <string name="external_source">External</string>
+    <string name="location_permission">Location Permission</string>
+    <string name="not_upload">Pending</string>
+    <string name="waiting_location">Waiting for location…</string>
+    <string name="pending">Pending</string>
+    <string name="uploading">Uploading</string>
+    <string name="paused">Paused</string>
+    <string name="done">Done</string>
+    <string name="splitting_video">Splitting video</string>
+    <string name="upload_error">Upload error</string>
+    <string name="video">Video</string>
+    <string name="progress">Progress</string>
+    <string name="status">Status</string>
+    <string name="manual_video">Manual Video</string>
+    <string name="camera_not_supported">Unsupported camera hardware</string>
+    <string name="unsupported_camera_explainer">Your camera is not currently supported by our app</string>
+    <string name="close">Close</string>
+    <string name="sending_to_arweave">Sending to Arweave</string>
+    <string name="uploading_picture">Uploading picture</string>
+    <string name="get_started">Get Started</string>
+    <string name="next">Next</string>
+    <string name="confirmation_dialog_yes">Yes</string>
+    <string name="confirmation_dialog_no">No</string>
+    <string name="confirmation_dialog_agree">I understand</string>
+    <string name="confirmation_dialog_close">Close</string>
+    <string name="about_website">Website</string>
+    <string name="about_version">Version</string>
+    <string name="about_osl">Open source licenses</string>
+    <string name="camera_hold_still">Hold still</string>
+    <string name="about_traxa_description">The purpose of this app is to demonstrate a MVP (Minimum Viable Product) for Traxa.io platform.\nWe want to reduce the pains associated with geo tracking, conducting insurance claims and rewarding those for participating in securing intermodal international trade.</string>
+    <string name="question_capture_confirmation_dialog">Is this a valid intermodal shipping container?</string>
+    <string name="how_to_use">How To Use</string>
+    <string name="onboard_slide_1_title">Welcome</string>
+    <string name="onboard_slide_1_subtitle">This is an MVP showing how you can upload shipping containers to the blockchain</string>
+    <string name="onboard_slide_2_title">@string/how_to_use</string>
+    <string name="onboard_slide_2_subtitle">Find an intermodal shipping container complying with\nISO6346 standards</string>
+    <string name="onboard_slide_3_title">@string/how_to_use</string>
+    <string name="onboard_slide_3_subtitle">Then, take a picture of the container</string>
+    <string name="onboard_slide_4_title">@string/how_to_use</string>
+    <string name="onboard_slide_4_subtitle">And finally, allow the container to be uploaded</string>
+    <string name="onboard_slide_5_title">Done</string>
+    <string name="onboard_slide_5_subtitle">After processing, the container will be available on the blockchain!</string>
+    <string name="join_our_discord">Join our Discord community!</string>
+    <string name="share_your_experience">Send us your feedback!</string>
+    <string name="example_shipping_container">Example intermodal shipping container</string>
+    <string name="future_releases_rewards">Future releases will provide rewards and incentives for participating in Traxa.io</string>
+    <string name="traxa_mvp_purpose">The purpose of this app is to demonstrate a MVP (Minimum Viable Product) for Traxa.io platform</string>
+    <string name="traxa_mvp_transaction_fee">This transaction fee is sponsored by Traxa.io community members</string>
+    <string name="traxa_wait_blockchain_processing">Your image is being processed. If it\'s a valid intermodal shipping container, you should see your NFT shortly.</string>
+    <string name="share_feedback">Send us your thoughts about Traxa</string>
+    <string name="processing_on_arweave">Processing on Arweave</string>
+    <string name="processing">Processing</string>
+    <string name="container_good">Good</string>
+    <string name="container_bad">Bad</string>
+    <string name="color_red">Red</string>
+    <string name="color_green">Green</string>
+    <string name="color_yellow">Yellow</string>
+    <string name="color_blue">Blue</string>
+    <string name="color_white">White</string>
+    <string name="color_black">Black</string>
+    <string name="upload_message_title">Congratulations!</string>
+    <string name="upload_message_subtitle">You\'ve scanned %d containers,\n waiting time is now reduced</string>
+    <string name="nft_ready_message">Your NFT is ready!</string>
+    <string name="nft_mint_title">Congratulations!</string>
+    <string name="error_msg_profile_auth_error">An error occurred during authentication, please try again</string>
+    <string name="error_msg_profile_auth_failed">Authentication failed, please try again</string>
+    <string name="profile_auth_description">Authenticate to view your profile number</string>
+    <string name="profile_auth_button_negative">Close</string>
+    <string name="profile_auth_title">Profile number</string>
+    <string name="upload_container_subtitle">You have successfully scanned the container! \nIt now lives on the blockchain!</string>
+    <string name="upload_open_nft_button">Open NFT</string>
+    <string name="profile_changed">Restart the app to see changes</string>
+    <string name="container_copy_debug_info">Copy debug info</string>
+    <string name="container_share_image">Share image</string>
+    <string name="menu_container_yard_sort">Sort</string>
+    <string name="menu_container_yard_remove_unknowns">Remove all Unknowns</string>
+    <plurals name="container_remove_result_message">
+        <item quantity="one">%d container removed</item>
+        <item quantity="many">%d containers removed</item>
+        <item quantity="other">%d containers removed</item>
+        <item quantity="zero">%d containers removed</item>
+    </plurals>
+
+    <string-array name="iamutkarshtiwari_github_io_ananas_type_names">
+        <item>Traxa</item>
+    </string-array>
+
+    <string-array translatable="false" name="iamutkarshtiwari_github_io_ananas_types">
+        <item>stickertraxa</item>
+    </string-array>
+
+    <integer-array translatable="false" name="iamutkarshtiwari_github_io_ananas_type_count">
+        <item>1</item> <!-- 2 stickers in category 1 -->
+    </integer-array>
+
+</resources>

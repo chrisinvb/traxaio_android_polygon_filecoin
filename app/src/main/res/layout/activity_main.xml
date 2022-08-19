@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="android.content.res.Configuration" />
+
+        <variable
+            name="viewModel"
+            type="io.traxa.ui.main.MainViewModel" />
+
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:background="@color/black"
+        tools:context=".ui.main.MainActivity"
+        tools:showPaths="true">
+
+        <io.traxa.ui.views.CameraPreviewView
+            android:id="@+id/cameraPreviewView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:keepScreenOn="true" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/lyt_camera"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:animateLayoutChanges="true">
+
+            <View
+                android:id="@+id/top"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <io.traxa.ui.views.Scanner
+                android:id="@+id/scanner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@id/top"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/img_record"
+                android:visibility="@{viewModel.recording ? View.VISIBLE : View.GONE}"
+                android:layout_gravity="center"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_record"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="58dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="@{viewModel::toggleRecording}"
+                android:src="@drawable/ic_record"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_containers"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/rounded_background"
+                android:clickable="true"
+                android:focusable="true"
+                android:rotation="@{viewModel.viewRotation}"
+                android:onClick="@{viewModel::openContainerYard}"
+                android:visibility="@{viewModel.recording ? View.GONE : View.VISIBLE}"
+                android:padding="10dp"
+                app:layout_constraintBottom_toBottomOf="@+id/img_about"
+                app:layout_constraintEnd_toStartOf="@+id/img_about"
+                app:layout_constraintTop_toTopOf="@+id/img_about"
+                app:srcCompat="@drawable/ic_containers" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_about"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/rounded_background"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?actionBarItemBackground"
+                android:onClick="@{viewModel::openSettings}"
+                android:padding="10dp"
+                android:rotation="@{viewModel.viewRotation}"
+                android:src="@drawable/ic_baseline_settings_24"
+                android:visibility="@{viewModel.recording ? View.GONE : View.VISIBLE}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/top" />
+
+            <FrameLayout
+                android:id="@+id/lyt_message_landscape"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_margin="24dp"
+                android:rotation="90"
+                android:visibility="@{(viewModel.message != null &amp;&amp; viewModel.screenOrientation == Configuration.ORIENTATION_LANDSCAPE) ? View.VISIBLE : View.GONE }"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                app:layout_constraintTop_toBottomOf="@+id/img_about">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="32dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?selectableItemBackground"
+                    android:onClick="@{viewModel::messageClicked}"
+                    android:visibility="visible"
+                    app:cardCornerRadius="32dp"
+                    app:cardElevation="1dp"
+                    app:layout_constraintBottom_toTopOf="@+id/lyt_modes"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <TextView
+                        android:id="@id/txt_message"
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:drawablePadding="8dp"
+                        android:drawableTint="@color/black"
+                        android:gravity="center"
+                        android:paddingHorizontal="12dp"
+                        android:paddingVertical="8dp"
+                        android:text="@{viewModel.message.text}"
+                        android:textColor="@color/black"
+                        app:drawableStartCompat="@{viewModel.message.icon()}" />
+
+                </androidx.cardview.widget.CardView>
+
+            </FrameLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/lyt_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="24dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?selectableItemBackground"
+                android:onClick="@{viewModel::messageClicked}"
+                android:visibility="visible"
+                app:cardCornerRadius="32dp"
+                app:cardElevation="1dp"
+                app:layout_constraintBottom_toTopOf="@+id/img_record"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="38dp"
+                    android:drawablePadding="8dp"
+                    android:gravity="center"
+                    android:paddingHorizontal="12dp"
+                    android:paddingVertical="8dp"
+                    android:text="@{viewModel.message.text}"
+                    android:textColor="@color/black"
+                    android:visibility="@{(viewModel.message != null &amp;&amp; viewModel.screenOrientation == Configuration.ORIENTATION_PORTRAIT)  ? View.VISIBLE : View.GONE }"
+                    app:drawableStartCompat="@{viewModel.message.icon()}"
+                    app:drawableTint="@color/black" />
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+</layout>
